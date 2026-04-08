@@ -4,7 +4,7 @@ A data-driven React application that transforms words into visually meaningful c
 
 ## 🌐 Live Demo
 
-**[View Live Application](https://colour-a-word-ictay8fqg-prem11.vercel.app/)**
+**[View Live Application](https://colour-a-word.vercel.app/)**
 
 Try it now! Enter any word like "ocean", "sunset", or "forest" to see the magic happen.
 
