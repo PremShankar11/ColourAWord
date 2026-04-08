@@ -36,7 +36,7 @@ export const getDeterministicOffset = (hex) => {
 
 export const getCardHeight = (hex) => {
   const brightness = getBrightness(hex);
-  const baseHeight = 330 - brightness * 0.72;
+  const baseHeight = 370 - brightness * 0.72;
   const offset = getDeterministicOffset(hex) * 2.2;
 
   return Math.round(clamp(baseHeight + offset, 150, 360));

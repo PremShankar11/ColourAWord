@@ -25,7 +25,7 @@ function ColorGrid({ colors }) {
       </h2>
       <div className="mb-8 flex flex-col items-center gap-4">
         <p className="text-center text-sm text-gray-500">
-          Click any swatch to copy its hex code
+          Click any card to copy its hex code
         </p>
         <div className="inline-flex rounded-full bg-white/80 p-1 shadow-sm ring-1 ring-slate-200/80 backdrop-blur-sm">
           <button
