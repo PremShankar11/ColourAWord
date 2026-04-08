@@ -1,0 +1,5 @@
+{
+  "installCommand": "cd colorapp && npm install",
+  "buildCommand": "cd colorapp && npm run build",
+  "outputDirectory": "colorapp/dist"
+}
