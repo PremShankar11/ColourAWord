@@ -2,6 +2,12 @@
 
 A data-driven React application that transforms words into visually meaningful color palettes using real-world image data.
 
+## 🌐 Live Demo
+
+**[View Live Application](https://colour-a-word-ictay8fqg-prem11.vercel.app/)**
+
+Try it now! Enter any word like "ocean", "sunset", or "forest" to see the magic happen.
+
 ## 🎨 Overview
 
 This application converts a word into a visually meaningful color palette by leveraging real-world image data. We use the Unsplash API to fetch semantically relevant images and extract dominant colors using node-vibrant. This ensures that the generated colors are contextually accurate, dynamic, and scalable, rather than predefined or random.
