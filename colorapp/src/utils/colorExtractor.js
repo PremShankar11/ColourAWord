@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { Vibrant } from 'node-vibrant/browser';
+import { simplifyHexColor } from './colorMetrics';
 
 const UNSPLASH_ACCESS_KEY = import.meta.env.VITE_UNSPLASH_ACCESS_KEY || 'YOUR_UNSPLASH_ACCESS_KEY';
 
@@ -61,11 +62,20 @@ export const fetchImagesAndExtractColors = async (word) => {
 
     const colorArrays = await Promise.all(colorPromises);
     const allColors = colorArrays.flat();
-    
-    // Remove duplicates
+
+    const groupedFrequency = allColors.reduce((accumulator, color) => {
+      const groupedColor = simplifyHexColor(color);
+      accumulator[groupedColor] = (accumulator[groupedColor] || 0) + 1;
+      return accumulator;
+    }, {});
+
     const uniqueColors = [...new Set(allColors)];
-    
-    return uniqueColors;
+
+    return uniqueColors.map((color, index) => ({
+      hex: color,
+      relevance: groupedFrequency[simplifyHexColor(color)] || 1,
+      originalIndex: index,
+    }));
   } catch (error) {
     console.error('Error fetching colors:', error);
     throw error;
